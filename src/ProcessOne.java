@@ -11,7 +11,6 @@ public class ProcessOne implements Runnable {
     BufferedWriter bw = null;
     FileWriter fw = null;
 
-
     /**
      * When an object implementing interface <code>Runnable</code> is used
      * to create a thread, starting the thread causes the object's
@@ -26,8 +25,6 @@ public class ProcessOne implements Runnable {
     @Override
     public void run() {
              int counter  = 1;
-
-
 
         for (int i = 0; i < 10; i++) {
             /**
@@ -54,7 +51,13 @@ public class ProcessOne implements Runnable {
                  */
                 Thread.sleep(randomInt * 100);
 
+                /**
+                 * Output to console
+                 */
                 System.out.println(counter + ". " + "Thread One + \t" + "Sleep: " + "\t" + randomInt);
+                /**
+                 * Output to file
+                 */
                 bw.write("Thread One + \t" + "Sleep: " + "\t" + randomInt + "\r\n");
                 bw.flush();
                 bw.close();

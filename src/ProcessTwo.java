@@ -10,7 +10,6 @@ import java.io.IOException;
 public class ProcessTwo implements Runnable {
     BufferedWriter bw = null;
     FileWriter fw = null;
-    private File file = new File("OutPutFile.txt");
 
     /**
      * When an object implementing interface <code>Runnable</code> is used
@@ -26,6 +25,7 @@ public class ProcessTwo implements Runnable {
     @Override
     public void run() {
             int counter = 1;
+
         for (int i = 0; i < 10; i++) {
             /**
              * creates a randomNumber object
@@ -55,6 +55,9 @@ public class ProcessTwo implements Runnable {
                  * Output to console
                  */
                 System.out.println(counter + ". " + "Thread Two + \t" + "Sleep: " + "\t" + randomInt);
+                /**
+                 * Output to file
+                 */
                 bw.write("Thread Two + \t" + "Sleep: " + "\t" + randomInt + "\r\n");
                 bw.flush();
                 bw.close();
