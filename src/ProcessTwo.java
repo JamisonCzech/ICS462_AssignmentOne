@@ -54,11 +54,11 @@ public class ProcessTwo implements Runnable {
                 /**
                  * Output to console
                  */
-                System.out.println(counter + ". " + "Thread Two + \t" + "Sleep: " + "\t" + randomInt);
+                System.out.println(counter + ". " + "Thread Two --->   " + "Sleep: " + " " + randomInt);
                 /**
                  * Output to file
                  */
-                bw.write("Thread Two + \t" + "Sleep: " + "\t" + randomInt + "\r\n");
+                bw.write(counter + ". " + "Thread Two --->   " + "Sleep: " + " " + randomInt + "\r\n");
                 bw.flush();
                 bw.close();
                 counter++;

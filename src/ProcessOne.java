@@ -54,11 +54,11 @@ public class ProcessOne implements Runnable {
                 /**
                  * Output to console
                  */
-                System.out.println(counter + ". " + "Thread One + \t" + "Sleep: " + "\t" + randomInt);
+                System.out.println(counter + ". " + "Thread One --->   " + "Sleep: " + " " + randomInt);
                 /**
                  * Output to file
                  */
-                bw.write("Thread One + \t" + "Sleep: " + "\t" + randomInt + "\r\n");
+                bw.write(counter + ". " + "Thread One --->   " + "Sleep: " + " " + randomInt + "\r\n" );
                 bw.flush();
                 bw.close();
                 counter++;
