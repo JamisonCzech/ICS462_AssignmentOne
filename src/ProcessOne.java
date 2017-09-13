@@ -28,7 +28,7 @@ public class ProcessOne implements Runnable {
 
         for (int i = 0; i < 10; i++) {
             /**
-             * creates a randomNumber object
+             * creates a randomNumber
              */
             RandomNumber randomNumber = new RandomNumber();
             int randomInt = randomNumber.getRandomNumberInRange(1, 3);
@@ -49,7 +49,7 @@ public class ProcessOne implements Runnable {
                  *         the length of time to sleep in milliseconds
                  *
                  */
-                Thread.sleep(randomInt * 100);
+                Thread.sleep(randomInt);
 
                 /**
                  * Output to console

@@ -64,7 +64,8 @@ public class Main {
         }
         bw = new BufferedWriter(fw);
         try {
-            bw.write("Jamison Czech\r\n" + "Assignment One\r\n" + "Due September 13th, 2017\r\n\r\n" );
+            bw.write("Jamison Czech\r\n" + "Assignment One\r\n" +
+                    "Due September 13th, 2017\r\n\r\n" );
             bw.flush();
             bw.close();
         } catch (IOException e) {
